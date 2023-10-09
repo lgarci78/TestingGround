@@ -3151,14 +3151,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 638717914}
+  - component: {fileID: 638717915}
   - component: {fileID: 638717913}
   - component: {fileID: 638717912}
   - component: {fileID: 638717911}
-  - component: {fileID: 638717915}
   - component: {fileID: 638717910}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3292,7 +3292,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 9
   m_Sprite: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.69310665, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3330,6 +3330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3a91923f96f88489470d85ba31a967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthpoints: 30
 --- !u!1 &650677373
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,7 +5377,6 @@ GameObject:
   - component: {fileID: 971046419}
   - component: {fileID: 971046424}
   - component: {fileID: 971046423}
-  - component: {fileID: 971046422}
   - component: {fileID: 971046421}
   - component: {fileID: 971046420}
   m_Layer: 0
@@ -5437,18 +5437,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &971046422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971046418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e21ce96fa573c0468f5ca4f082f8072, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &971046423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5463,12 +5451,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 971046421}
   shootingPoint: {fileID: 892293011}
-  projectilePrefab: {fileID: 4811161130966393703, guid: 178899de5b3a5b44f8cd4f5eb4595990, type: 3}
+  projectilePrefab: {fileID: 4679016762448352191, guid: 27a1c6a4849fe4a49a7693ae320be2cc, type: 3}
   playerTransform: {fileID: 638717914}
   projectileSpeed: 10
   cooldown: 4
   distance: 20
-  projectileManager: {fileID: 971046422}
+  projectileManager: {fileID: 9097334436120949989, guid: a49ddb603858946428b5d22b772db06f, type: 3}
 --- !u!212 &971046424
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7407,7 +7395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1789774870
 Transform:
   m_ObjectHideFlags: 0
@@ -7825,7 +7813,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1855698423
 Transform:
   m_ObjectHideFlags: 0

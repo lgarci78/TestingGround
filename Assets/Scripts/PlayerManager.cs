@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    private int _healthpoints;
+    [SerializeField] private int _healthpoints;
 
     private void Awake()
     {

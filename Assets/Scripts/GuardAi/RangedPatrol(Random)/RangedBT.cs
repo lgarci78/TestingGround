@@ -10,7 +10,7 @@ public class RangedBT : BehaviorTree.MyTree
     public Transform shootingPoint;
     public GameObject projectilePrefab;
 
-    public static float speed = 2f;
+    public static float speed = 7f;
     public static float fovRange = 35f; //if the enemy is 35 units away or less then it tracks the player
     public static float range = 5f;
     public static float maxDistance = 5f;
