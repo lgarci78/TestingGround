@@ -79,6 +79,7 @@ public class BoundaryPatrol : Node
 
     public override NodeState Evaluate()
     {
+
         if (_navMeshAgent.remainingDistance <= _stoppingDistance)
         {
             _targetPoint = GetRandomPointInBounds();

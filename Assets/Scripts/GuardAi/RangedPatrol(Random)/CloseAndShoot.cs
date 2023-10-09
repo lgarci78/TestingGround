@@ -51,16 +51,20 @@ public class CloseAndShoot : Node
         if (distanceToPlayer > _desiredDistance)
         {
             Debug.Log("If the distance to player is greater than 9");
-            if (distanceToPlayer > 20f)
+            if (distanceToPlayer > 50f)
             {
+                parent.parent.SetData("target", null);
                 _agent.ResetPath(); // Reset the path to stop pursuing the player
                 //_transform.rotation = _initialRotation; // Reset the rotation
                 state = NodeState.FAILURE; // Return a failure state
+
                 Debug.Log("Player to far...returning to patrol");
+                
             }
             else
             {
-                Vector3 desiredPosition = _playerTransform.position + (_transform.position - _playerTransform.position).normalized * _desiredDistance;
+                Vector3 directionToPlayer = (_playerTransform.position - _transform.position).normalized;
+                Vector3 desiredPosition = _playerTransform.position - directionToPlayer * (_desiredDistance - 0.5f);
                 //Debug.Log("Before rotation change: " + _transform.rotation.eulerAngles);
                 //_transform.rotation = _initialRotation;
                 //Debug.Log("After rotation change: " + _transform.rotation.eulerAngles);

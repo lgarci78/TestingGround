@@ -11,14 +11,14 @@ public class RangedBT : BehaviorTree.MyTree
     public GameObject projectilePrefab;
 
     public static float speed = 2f;
-    public static float fovRange = 15f;
+    public static float fovRange = 35f; //if the enemy is 35 units away or less then it tracks the player
     public static float range = 5f;
     public static float maxDistance = 5f;
 
     public Transform playerTransform;
     public float projectileSpeed = 10f;
     public float cooldown = 4f;
-    public float distance = 9f;
+    public float distance = 20f; // if the enemy is 20 units away or less then it shoots
 
     public ProjectileManager projectileManager;
 
